@@ -45,9 +45,21 @@
             as line type. In contrast to the black hat visualization, the plot of the "index" measurement starts at 2010, and the 
             axis title is descriptive of what the index actually means; these allow the true meaning of the values in the plot to 
             be accurately conveyed.<br>
+            <br>
             Given the exigence of the climate problem and the need for an understanding of the problem for future planning, a forecast 
             was incorporated into the visualization. Forecasts were also given uncertainty intervals, slightly lighter saturation, and added to 
             the legend for clarity to distinguish forecast values from actual measured values.
+        </p>
+        <h2>Extra Credit Interaction (see at the bottom of the webpage)</h2>
+        <p>
+            The dataset consists of pollution data of each country from 1990 to 2024 as well as seen in the white hat and black hat visualizations. 
+            Given the severity and insights of the Greenhouse data, we wanted to highlight and quiz the user on what the potential risks are of 
+            having a black hat versus a white hat visualization. It is made clear that just one small change of omitting some years of data can 
+            completely alter how we view the trends of Greenhouse emissions. After already viewing our original black hat and white hat visualizations, the user has the option to now filter between 
+            a good and bad visualization by clicking a button called "change my hat" 
+            effectively switching the visualization from a black hat to a white hat and vice versa. In real time you can see the data trends being transformed just 
+            by adding and removing some years from the x-axis. The goal is that after viewing our webpage the user will have a clear understanding of the importance 
+            of any visualization, as they can sometimes determine very important actions we need to make. 
         </p>
     </div>
     </section>
@@ -63,56 +75,57 @@
         <h2>Development Process</h2>
         <h3>Division of Labor:</h3>
         <ul>
-            <li><b>Daniel Samuel: </b></li>
-            <li><b>Richard Thomas: </b>Aided in brainstorming of white hat visualization. Implemented visualizations in Tableau. Contributed ~4 man hours.</li>
-            <li><b>David Jiang: </b>Aided in brainstorming of white hat and black hat visualizations. Contributed to write up. Contributed ~4 man hours.</li>
+            <li><b>Daniel Samuel: </b>Aided in brainstorming of black hat visualization. Implemented the extra credit interaction. Contributed to the writeup. Worked on the webpage. Contributed ~6 man hours.</li>
+            <li><b>Richard Thomas: </b>Aided in brainstorming of white hat visualization. Implemented visualizations in Tableau. Worked on the webpage. Helped with bug fixes. Contributed ~6 man hours.</li>
+            <li><b>David Jiang: </b>Aided in brainstorming of white hat and black hat visualizations. Created the write up. Contributed to extra credit interaction. Worked on the webpage. Contributed ~6 man hours.</li>
         </ul>
         <p>
             The aspects that took the most time were deciding on design choices for white hat and black hat visualizations. Brainstorming ideas for both visualizations was functionally a single task, as we would decide on what deception we wished the black hat visualization to convey and then designed our white hat visualization to address the truth behind that deception.
+            Additionally, it took a good amount of time to decide on an extra credit interaction that would help to better engage users, as well as implementing this feature.
         </p>
     </section>
 
     <section>
         <h2>AI Usage</h2>
         <p>
-            ChatGPT was used to support brainstorming of visualization concepts, understand features of Tableau, resolve technical issues, and compare designs against assignment objectives. The Tableau visualizations used were created and analyzed by our team, with the use of AI for supporting us in the process.
+            ChatGPT was used to support brainstorming of visualization concepts, understand features of Tableau, understand complex graph transformations in JS, learning how to transform/highlight portions of the data, resolve technical issues, and compare designs against assignment objectives. The Tableau visualizations used were created and analyzed by our team, with the use of AI for supporting us in the process. 
         </p>
     </section>
 
   <section class="extra-credit">
     <h2> Extra Credit Interaction</h2>
-    <p> Note: By clicking the "change hat" button you can switch between our black and white hat visualizations yourself.
-    The following interaction and question are to help users think about the importance of a good visualization with no unnecessarily omitted sections. 
-    Please consider the question below as you view the interaction: </p>
+
+    <p> 
+        Note: By clicking the "change hat" button you can switch between our black and white hat visualizations yourself.
+        The following interaction and question are to help users think about the importance of a good visualization with no unnecessarily omitted sections. 
+        Please consider the question below as you view the interaction: 
+    </p>
 
     <p> For what reason(s) is omitting years here a bad idea?</p>
-<div class="checkboxes">
-    <label>
-        <input type="checkbox">
-        We could believe Turkey has the best Greenhouse Gas control
-    </label>
+    <div class="checkboxes">
+        <label>
+            <input type="checkbox">
+            We could believe Turkey has the best Greenhouse Gas control
+        </label>
 
-    <label>
-        <input type="checkbox">
-        We could believe that Japan is making significant progress
-    </label>
+        <label>
+            <input type="checkbox">
+            We could believe that Japan is making significant progress
+        </label>
 
-    <label>
-        <input type="checkbox">
-        We would miss that Germany has the best trend for reducing emissions
-    </label> 
+        <label>
+            <input type="checkbox">
+            We would miss that Germany has the best trend for reducing emissions
+        </label> 
 
-    <label>
-        <input type="checkbox">
-        We cannot tell which country to follow for reducing emmissions and preserving the planet?!
-    </label> 
+        <label>
+            <input type="checkbox">
+            We cannot tell which country to follow for reducing emmissions and preserving the planet?!
+        </label> 
 
-    <div id="answer_key" class="unrevealed" onclick="revealAnswer()">
-        Submit Answer
-    </div>
-
-    
-
+        <div id="answer_key" class="unrevealed" onclick="revealAnswer()">
+            Submit Answer
+        </div>
     </div>
     
     <div id="vis"></div>
