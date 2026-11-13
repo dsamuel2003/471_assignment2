@@ -9,6 +9,35 @@ const countries = [
 
 const initialYearRange = [2012, 2024];
 
+const answer_key = document.querySelector("#answer_key");
+async function revealAnswer() {
+  const anim1 = answer_key.animate(
+    [
+      {backgroundColor: '#333', borderColor: 'black'},
+      {backgroundColor: 'white', borderColor: 'white'},
+    ],
+    {
+      duration: 500,
+      fill: 'forwards'
+    }
+  );
+  await anim1.finished;
+
+  answer_key.textContent = "Answer: All of the above!"
+  answer_key.animate(
+    [
+      {color: 'white'},
+      {color: 'black'},
+    ],
+    {
+      duration: 500,
+      fill: 'forwards'
+    }
+  );
+  answer_key.onclick = null;
+  answer_key.classList.remove('unrevealed');
+}
+
 function createVis(data) {
   const margin = {
     top: 70,
@@ -90,7 +119,7 @@ function createVis(data) {
 
   const x = d3.scaleLinear().domain(initialYearRange).range([0, innerWidth]);
 
-  const y = d3.scaleLinear().domain([0, 350000]).range([innerHeight, 0]);
+  const y = d3.scaleLinear().domain([0, 170]).range([innerHeight, 0]);
 
   const line = d3
     .line()
@@ -276,7 +305,7 @@ function createVis(data) {
 }
 
 function init() {
-  d3.csv("./data/data.csv")
+  d3.csv("./data/index_data.csv")
     .then((data) => {
       const formattedData = data.map((d) => ({
         country: d.REF_AREA,
@@ -285,6 +314,7 @@ function init() {
       }));
 
       createVis(formattedData);
+      console.log(formattedData);
     })
     .catch((error) =>
       console.error("An error occurred when loading data.csv:", error),
