@@ -24,9 +24,27 @@
     </section>
 
     <div class="description">
-        <h2>Manipulative Techniques</h2>
+        <h2>Black Hat Visualization Manipulative Techniques</h2>
         <p>
-            (placeholder)
+            <ol>
+                <li><b>Data Transformation:</b> Pollution data were transformed into values relative to 2010 pollution levels, which only allows for one perspective of the data as absolute levels of pollution are completely obscured by this transformation.</li>
+                <li><b>Titles/Lables:</b> The unit of measure is denoted in the original dataset only as "index." In our visualization we refer to it as "Pollution Index," which is still an perfectly true description of the unit of measure. By not specifying how this index is calculated, audiences may infer it is a much more involved and nuanced computation than it actually is and come to the conclusion that "since Türkiye has such a higher pollution index than Japan and Germany, it must be a very dirty country and has a larger responsibility to the global community to do its part in resolving the climate change problem." </li>
+                <li><b>Axes: </b> The data is truncated to begin at 2012, excluding the year 2010 where "index" values for all countries are 100. This prevents audiences from realizing how the index is actually calculated, allowing for the deception above to work.</li>
+                <li><b>Axes: </b> The y-axis is truncated to begin at 65 in order to magnify the disparity in "Pollution Index" between countries. This is to cause audiences to confer more scrutiny upon countries like Türkiye for their perceived greater contribution to the climate problem.</li>
+            </ol>
+        </p>
+        <h2>White Hat Visualization Design Choices</h2>
+        <p>
+            The dataset consists of pollution data of each country from 1990 to 2024. Given that the data is a time series, 
+            a line graph was chosen to communicate the trends over time. To contrast the deception of the black hat 
+            visualization, both absolute and the transformed relative values for pollution were plotted in order to communicate the full picture 
+            of pollution trends. Color was chosen to encode country as a more effective channel than alternate choices such 
+            as line type. In contrast to the black hat visualization, the plot of the "index" measurement starts at 2010, and the 
+            axis title is descriptive of what the index actually means; these allow the true meaning of the values in the plot to 
+            be accurately conveyed.<br>
+            Given the exigence of the climate problem and the need for an understanding of the problem for future planning, a forecast 
+            was incorporated into the visualization. Forecasts were also given uncertainty intervals, slightly lighter saturation, and added to 
+            the legend for clarity to distinguish forecast values from actual measured values.
         </p>
     </div>
     </section>
@@ -34,21 +52,27 @@
     <section>
         <h2>Data Sources and References</h2>
         <p>
-            (placeholder)
+            Pollution data was sourced from the <a href="https://data-explorer.oecd.org/vis?df[ds]=DisseminateFinalDMZ&df[id]=DSD_AIR_GHG@DF_AIR_GHG&df[ag]=OECD.ENV.EPI"> Organization for Economic Co-operation and Development (OECD)</a>
         </p>
     </section>
 
     <section>
         <h2>Development Process</h2>
+        <h3>Division of Labor:</h3>
+        <ul>
+            <li><b>Daniel Samuel: </b></li>
+            <li><b>Richard Thomas: </b>Aided in brainstorming of white hat visualization. Implemented visualizations in Tableau. Contributed ~4 man hours.</li>
+            <li><b>David Jiang: </b>Aided in brainstorming of white hat and black hat visualizations. Contributed to write up. Contributed ~4 man hours.</li>
+        </ul>
         <p>
-            (placeholder)
+            The aspects that took the most time were deciding on design choices for white hat and black hat visualizations. Brainstorming ideas for both visualizations was functionally a single task, as we would decide on what deception we wished the black hat visualization to convey and then designed our white hat visualization to address the truth behind that deception.
         </p>
     </section>
 
     <section>
         <h2>AI Usage</h2>
         <p>
-            (placeholder)
+            ChatGPT was used to support brainstorming of visualization concepts, understand features of Tableau, resolve technical issues, and compare designs against assignment objectives. The Tableau visualizations used were created and analyzed by our team, with the use of AI for supporting us in the process.
         </p>
     </section>
 
